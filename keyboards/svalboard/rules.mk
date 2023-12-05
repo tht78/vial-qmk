@@ -28,11 +28,7 @@ ifeq ($(strip $(POINTING_DEVICE_DRIVER)), pmw3389)
 	OPT_DEFS += -DPOINTING_DEVICE_IS_PMW3389
 endif
 
-# this turns on Manna-Harbour's automousekeys:
-MH_AUTO_BUTTONS = yes
-
 ifeq ($(strip $(MH_AUTO_BUTTONS)), yes)
-  MOUSEKEY_ENABLE = yes
   OPT_DEFS += -DMH_AUTO_BUTTONS
 endif
 
