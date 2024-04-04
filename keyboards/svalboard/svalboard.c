@@ -32,12 +32,12 @@ void ps2_mouse_init_user() {
     PS2_MOUSE_SEND(0x59);
     */
 
-//Z tap -- doesn't seem to work.  0x01 is on.
+// //Z tap -- doesn't seem to work.  0x01 is on.
 
-  PS2_MOUSE_SEND(0xE2, "pts: 0xE2");
-  PS2_MOUSE_SEND(0x47, "pts: 0x47");
-  PS2_MOUSE_SEND(0x2C, "pts: 0x2C");
-  PS2_MOUSE_SEND(0x00, "pts: 0x00");  // 01 turns on Z tap, 00 turns off
+//   PS2_MOUSE_SEND(0xE2, "pts: 0xE2");
+//   PS2_MOUSE_SEND(0x47, "pts: 0x47");
+//   PS2_MOUSE_SEND(0x2C, "pts: 0x2C");
+//   PS2_MOUSE_SEND(0x00, "pts: 0x00");  // 01 turns on Z tap, 00 turns off
 
 
 /*
@@ -52,10 +52,10 @@ x"FF"- drift threshold. The default value for drift is x"FE", corresponding to a
 threshold of 1. A reset (x"FF") or set default (x"F6") command will not affect this byte.
 
 */
-  PS2_MOUSE_SEND(0xE2, "pts: 0xE2");
-  PS2_MOUSE_SEND(0x81, "pts: 0x81");
-  PS2_MOUSE_SEND(0x63, "pts: 0x63");
-  PS2_MOUSE_SEND(0x80, "pts: 0x80");  // 0xFE is default threshold of 1  try low and see what happens
+  // PS2_MOUSE_SEND(0xE2, "pts: 0xE2");
+  // PS2_MOUSE_SEND(0x81, "pts: 0x81");
+  // PS2_MOUSE_SEND(0x63, "pts: 0x63");
+  // PS2_MOUSE_SEND(0x80, "pts: 0x80");  // 0xFE is default threshold of 1  try low and see what happens
 
 /*
 E2 80 64
@@ -75,10 +75,10 @@ corresponding to approximately a 4 sample average, otherwise the default value i
 (decimal 128) corresponding to a 2 sample average. This value is not affected by a reset
 (x"FF") or set default (x"F6") command
 */
-  PS2_MOUSE_SEND(0xE2, "pts: 0xE2");
-  PS2_MOUSE_SEND(0x81, "pts: 0x81");
-  PS2_MOUSE_SEND(0x63, "pts: 0x64");
-  PS2_MOUSE_SEND(0x80, "pts: 0x80");  // 0x80 is default threshold of 2 samples try low and see what happens
+  // PS2_MOUSE_SEND(0xE2, "pts: 0xE2");
+  // PS2_MOUSE_SEND(0x81, "pts: 0x81");
+  // PS2_MOUSE_SEND(0x63, "pts: 0x64");
+  // PS2_MOUSE_SEND(0x80, "pts: 0x80");  // 0x80 is default threshold of 2 samples try low and see what happens
 /*
 
 Timing on the double tap on the trackpoint:
@@ -101,10 +101,10 @@ Z Time Constant [zTc]
 */
 
 
-    PS2_MOUSE_SEND(0xE2, "pts: 0xE2");
-    PS2_MOUSE_SEND(0x81, "pts: 0x81");
-    PS2_MOUSE_SEND(0x5E, "pts: 0x5E");
-    PS2_MOUSE_SEND(0x00, "pts: 0x00");
+    // PS2_MOUSE_SEND(0xE2, "pts: 0xE2");
+    // PS2_MOUSE_SEND(0x81, "pts: 0x81");
+    // PS2_MOUSE_SEND(0x5E, "pts: 0x5E");
+    // PS2_MOUSE_SEND(0x00, "pts: 0x00");
 
 
   // transfer function plateau speed -- default is 0x61
