@@ -23,6 +23,7 @@ void bootmagic_lite(void) {
 #endif
 
 #ifdef PS2_MOUSE_ENABLE
+/*
 void ps2_mouse_init_user() {
   //sensitivity command in fourth byte 00 = 0 multiplier, FF = 2.0 multiplier
   
@@ -52,10 +53,10 @@ x"FF"- drift threshold. The default value for drift is x"FE", corresponding to a
 threshold of 1. A reset (x"FF") or set default (x"F6") command will not affect this byte.
 
 */
-  PS2_MOUSE_SEND(0xE2, "pts: 0xE2");
-  PS2_MOUSE_SEND(0x81, "pts: 0x81");
-  PS2_MOUSE_SEND(0x63, "pts: 0x63");
-  PS2_MOUSE_SEND(0x01, "pts: 0xFE");  // 0xFE is default threshold of 1  try low and see what happens
+  // PS2_MOUSE_SEND(0xE2, "pts: 0xE2");
+  // PS2_MOUSE_SEND(0x81, "pts: 0x81");
+  // PS2_MOUSE_SEND(0x63, "pts: 0x63");
+  // PS2_MOUSE_SEND(0x01, "pts: 0xFE");  // 0xFE is default threshold of 1  try low and see what happens
 
 /*
 E2 80 64
@@ -75,10 +76,10 @@ corresponding to approximately a 4 sample average, otherwise the default value i
 (decimal 128) corresponding to a 2 sample average. This value is not affected by a reset
 (x"FF") or set default (x"F6") command
 */
-  PS2_MOUSE_SEND(0xE2, "pts: 0xE2");
-  PS2_MOUSE_SEND(0x81, "pts: 0x81");
-  PS2_MOUSE_SEND(0x63, "pts: 0x64");
-  PS2_MOUSE_SEND(0xFE, "pts: 0x01");  // 0x80 is default threshold of 2 samples try low and see what happens
+  // PS2_MOUSE_SEND(0xE2, "pts: 0xE2");
+  // PS2_MOUSE_SEND(0x81, "pts: 0x81");
+  // PS2_MOUSE_SEND(0x63, "pts: 0x64");
+  // PS2_MOUSE_SEND(0xFE, "pts: 0x01");  // 0x80 is default threshold of 2 samples try low and see what happens
 /*
 
 Timing on the double tap on the trackpoint:
@@ -100,12 +101,12 @@ Z Time Constant [zTc]
 
 */
 
-
+/*
     PS2_MOUSE_SEND(0xE2, "pts: 0xE2");
     PS2_MOUSE_SEND(0x81, "pts: 0x81");
     PS2_MOUSE_SEND(0x5E, "pts: 0x5E");
     PS2_MOUSE_SEND(0x00, "pts: 0x00");
-
+*/
 
   // transfer function plateau speed -- default is 0x61
 /*
