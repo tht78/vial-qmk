@@ -43,9 +43,9 @@ enum my_keycodes {
 enum layer {
     NORMAL,
     NORMAL_HOLD,
-    NAS,
     FUNC,
     FUNC_HOLD,
+    NAS,
     L5,
     L6,
     L7,
@@ -78,7 +78,6 @@ const uint16_t PROGMEM keymaps[NUM_LAYERS][MATRIX_ROWS][MATRIX_COLS] = {
         /*RT*/ MO(NAS),         KC_SPACE,       TO(FUNC),       KC_BSPC,        KC_LALT,     TG(NAS),
         /*LT*/ KC_LSFT,         KC_ENTER,       TO(NORMAL),          KC_TAB,         KC_LCTL,     KC_CAPS
     ),
-
     [NORMAL_HOLD] = LAYOUT(
              /*Center           North           East            South           West*/
         /*R1*/ KC_LEFT,         KC_WH_L,        XXXXXXX,        KC_MS_L,        LCTL(KC_LEFT),
@@ -95,24 +94,6 @@ const uint16_t PROGMEM keymaps[NUM_LAYERS][MATRIX_ROWS][MATRIX_COLS] = {
         /*RT*/ _______,         _______,        _______,        _______,        _______, _______,
         /*LT*/ _______,         _______,        _______,        _______,        _______, _______
     ),
-
-    [NAS] = LAYOUT(
-             /*Center           North           East            South           West*/
-        /*R1*/ KC_7,            KC_AMPR,        KC_UNDS,        KC_KP_PLUS,     KC_6,
-        /*R2*/ KC_8,            KC_KP_ASTERISK, KC_COLON,       KC_COMMA,       KC_CIRCUMFLEX,
-        /*R3*/ KC_9,            KC_LPRN,        KC_LGUI,        KC_DOT,         KC_SEMICOLON,
-        /*R4*/ KC_0,            KC_RPRN,        XXXXXXX,        KC_QUES,        KC_RBRC,
-
-        /*L1*/ KC_4,            KC_DOLLAR,      KC_5,           KC_MINUS,       KC_SLASH,
-        /*L2*/ KC_3,            KC_HASH,        KC_GT,          KC_PERCENT,     KC_LT,
-        /*L3*/ KC_2,            KC_AT,          XXXXXXX,        KC_X,           KC_ESC,
-        /*L4*/ KC_1,            KC_EXCLAIM,     KC_TILDE,       KC_EQUAL,       KC_DEL,
-
-        /*Down                  Inner           Upper           Outer Upper     Outer Lower  Pushthrough*/  
-        /*RT*/ MO(NAS),         KC_SPACE,       _______,       KC_BSPC,        KC_LALT, _______,
-        /*LT*/ KC_LSFT,         KC_ENTER,       _______,        KC_TAB,         KC_LCTL, _______
-    ),
-
     [FUNC] = LAYOUT(
              /*Center           North           East            South           West*/
         /*R1*/ KC_HOME,         KC_UP,          KC_RIGHT,       KC_DOWN,        KC_LEFT,
@@ -129,7 +110,6 @@ const uint16_t PROGMEM keymaps[NUM_LAYERS][MATRIX_ROWS][MATRIX_COLS] = {
         /*RT*/ MO(NAS),         KC_SPACE,       _______,       KC_BSPC,      KC_LALT, _______,
         /*LT*/ KC_LSFT,       KC_ENTER,         _______, KC_TAB,         KC_LCTL,_______
     ),
-
     [FUNC_HOLD] = LAYOUT(
              /*Center           North           East            South           West*/
         /*R1*/ KC_LEFT,         LCTL(KC_UP),   LCTL(KC_RIGHT), LCTL(KC_DOWN), LCTL(KC_LEFT),
@@ -146,7 +126,22 @@ const uint16_t PROGMEM keymaps[NUM_LAYERS][MATRIX_ROWS][MATRIX_COLS] = {
         /*RT*/ _______,         _______,        _______,        _______,        _______,_______,
         /*LT*/ _______,         _______,        _______,        _______,        _______, _______
     ),
-    
+    [NAS] = LAYOUT(
+             /*Center           North           East            South           West*/
+        /*R1*/ KC_7,            KC_AMPR,        KC_UNDS,        KC_KP_PLUS,     KC_6,
+        /*R2*/ KC_8,            KC_KP_ASTERISK, KC_COLON,       KC_COMMA,       KC_CIRCUMFLEX,
+        /*R3*/ KC_9,            KC_LPRN,        KC_LGUI,        KC_DOT,         KC_SEMICOLON,
+        /*R4*/ KC_0,            KC_RPRN,        XXXXXXX,        KC_QUES,        KC_RBRC,
+
+        /*L1*/ KC_4,            KC_DOLLAR,      KC_5,           KC_MINUS,       KC_SLASH,
+        /*L2*/ KC_3,            KC_HASH,        KC_GT,          KC_PERCENT,     KC_LT,
+        /*L3*/ KC_2,            KC_AT,          XXXXXXX,        KC_X,           KC_ESC,
+        /*L4*/ KC_1,            KC_EXCLAIM,     KC_TILDE,       KC_EQUAL,       KC_DEL,
+
+        /*Down                  Inner           Upper           Outer Upper     Outer Lower  Pushthrough*/  
+        /*RT*/ MO(NAS),         KC_SPACE,       _______,       KC_BSPC,        KC_LALT, _______,
+        /*LT*/ KC_LSFT,         KC_ENTER,       _______,        KC_TAB,         KC_LCTL, _______
+    ),
     [MBO] = LAYOUT(
              /*Center           North           East            South           West*/
         /*R1*/ KC_TRNS,        KC_TRNS,       KC_TRNS,       KC_BTN1,       KC_TRNS,
