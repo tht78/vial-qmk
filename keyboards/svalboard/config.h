@@ -16,6 +16,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #pragma once
+
+// This is used by our user's keymaps for conditionals.
+#define SVALBOARD
+
 //#define FORTY_FOUR_MM_TB
 /* key matrix size */
 // Rows are doubled-up
@@ -56,6 +60,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define USB_SUSPEND_WAKEUP_DELAY 500
 #define SELECT_SOFT_SERIAL_RATE {0}
 
+#define MOUSE_EXTENDED_REPORT
 #define SPLIT_POINTING_ENABLE
 #define POINTING_DEVICE_COMBINED
 #define POINTING_DEVICE_AUTO_MOUSE_MH_ENABLE
@@ -66,6 +71,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // hub, KVM, or a machine that boots slowly (ECC RAM), the keyboard no longer
 // needs to be reset to come to life.
 #define SPLIT_WATCHDOG_ENABLE
+
 
 //WS2812-fu here:
 // pretty lights
